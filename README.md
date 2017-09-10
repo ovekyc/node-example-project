@@ -1,6 +1,5 @@
 # example-project
-Authored by : Youngchan Kim
-
+[wiki](https://github.com/ovekyc/node-example-project/wiki)
 
 ## Quick Start
 
@@ -12,11 +11,24 @@ Authored by : Youngchan Kim
 ## Stack
 
     Node.js
-    React
+    React (or React-Native)
+
+* Language: [ES6](https://babeljs.io/docs/learn-es2015/)+
+* Backend Framework: [Express](https://expressjs.com/)
+* Frontend Framework: [React](https://facebook.github.io/react/)
+* Mobile Framework: [React Native](https://facebook.github.io/react-native/)
+* General Unit Test: [Tape](https://github.com/substack/tape)
+* React Unit Test: [Jest](http://facebook.github.io/jest/) + [Enzyme](https://github.com/airbnb/enzyme)
+* Test Coverage: [Istanbul](https://github.com/gotwarlost/istanbul)
+* Code Style: [ESLint](http://eslint.org/)
+* Build: [Gulp](http://gulpjs.com/) or [Webpack](https://webpack.github.io/)
+
+###### Style Guides
+[ES6](<https://github.com/airbnb/javascript>) / [React](<https://github.com/airbnb/javascript/tree/master/react>)
 
 ## Project structure
 
-    config
+    config                  // configuration files. should be json format.
     dist*
     src
       ├─client
