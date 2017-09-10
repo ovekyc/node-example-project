@@ -39,7 +39,7 @@ gulp.task('clean:client', () => rimraf.sync('./dist-client'));
 gulp.task('clean:server', () => rimraf.sync('./dist-server'));
 gulp.task('clean', ['clean:test', 'clean:server', 'clean:client']);
 
-gulp.task('run:eslint', () => gulp.src('src/**/*.js')
+gulp.task('run:eslint', () => gulp.src(['src/**/*.js', '!src/test/browser/**/*.js'])
   .pipe(eslint())
   .pipe(eslint.format())
   .pipe(eslint.results(lintReporter))

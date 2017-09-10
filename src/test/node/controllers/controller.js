@@ -16,7 +16,7 @@ test('Add Topic', t => {
   Controller.get(req, res, () => {
     const data = res._getData();
     t.equal(res.statusCode, expected.status, 'should be same status');
-    t.equal(data.str, expected.str, 'should be same string');
+    t.equal(data, expected.body, 'should be same string');
     t.end();
   });
 });

@@ -4,12 +4,20 @@
   "description": "example-project",
   "main": "index.js",
   "scripts": {
+    "jest": "jest",
+    "update-snapshot": "jest --updateSnapshot",
     "lint": "gulp lint",
     "watch": "gulp watch",
     "build": "gulp build",
     "build-test": "gulp build:test",
-    "test": "BABEL_ENV=test NODE_ENV=test npm run build-test && gulp test",
+    "test": "BABEL_ENV=test NODE_ENV=test jest && BABEL_ENV=test NODE_ENV=test  npm run build-test && gulp test",
     "start": "gulp server"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/browser/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)"
+    ]
   },
   "repository": {
     "type": "git",
@@ -60,8 +68,12 @@
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-__coverage__": "^11.0.0",
+    "enzyme": "^2.9.1",
     "isuuid": "^0.1.0",
+    "jest": "^21.0.2",
     "node-mocks-http": "^1.6.2",
+    "react-test-renderer": "^15.6.1",
+    "sinon": "^3.2.1",
     "tape": "^4.6.3"
   }
 }
